@@ -33,13 +33,13 @@ public class PactProviderTest {
         application = SpringApplication.run(ProviderServiceApplication.class);
     }
 
-    @AfterClass
-    public static void kill() {
-        application.stop();
-    }
-
     /* Specify the state in the contract that we want to test */
     @State("test GET")
     public void toGetState() {
+    }
+
+    @AfterClass
+    public static void kill() {
+        application.stop();
     }
 }
