@@ -18,13 +18,13 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class PactTest {
+public class PactConsumerTest {
 
     @Rule
     public PactProviderRuleMk2 mockProvider = new PactProviderRuleMk2("FOLIO provider", "localhost", 8080, this);
 
     @Pact(consumer = "FOLIO consumer")
-    public RequestResponsePact buildProvider(PactDslWithProvider builder) {
+    public RequestResponsePact buildConsumer(PactDslWithProvider builder) {
         Map<String, String> headers = new HashMap();
         headers.put("Content-Type", MediaType.APPLICATION_JSON_VALUE);
         return builder
