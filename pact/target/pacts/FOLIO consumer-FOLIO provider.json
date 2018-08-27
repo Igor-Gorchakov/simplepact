@@ -1,0 +1,39 @@
+{
+    "provider": {
+        "name": "FOLIO provider"
+    },
+    "consumer": {
+        "name": "FOLIO consumer"
+    },
+    "interactions": [
+        {
+            "description": "A request for JSON",
+            "request": {
+                "method": "GET",
+                "path": "/provider"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "value": "ok"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "test GET"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}

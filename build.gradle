@@ -1,0 +1,16 @@
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-web', version: '4.0.0.RELEASE'
+        compile 'junit:junit:4.12'
+        compile 'au.com.dius:pact-jvm-consumer-junit_2.11:3.5.0'
+    }
+}
