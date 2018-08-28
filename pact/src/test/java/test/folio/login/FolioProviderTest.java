@@ -29,7 +29,7 @@ public class FolioProviderTest {
     /**
      * Specify the state in the contract that we want to test
      */
-    @State("test GET")
-    public void toGetState() {
+    @State("User login scenario")
+    public void testLogUserInTheSystem() {
     }
 }

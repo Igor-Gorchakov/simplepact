@@ -7,7 +7,7 @@
     },
     "interactions": [
     {
-            "description": "A request for JSON",
+            "description": "Request to log user in the system",
             "request": {
                 "path": "/authn/login",
                 "method": "POST",
@@ -32,7 +32,7 @@
             },
             "providerStates": [
                 {
-                    "name": "test GET"
+                    "name": "User login scenario"
                 }
             ]
         }
