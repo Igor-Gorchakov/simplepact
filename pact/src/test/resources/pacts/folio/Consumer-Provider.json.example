@@ -1,0 +1,48 @@
+{
+    "provider": {
+        "name": "Provider"
+    },
+    "consumer": {
+        "name": "Consumer"
+    },
+    "interactions": [
+    {
+            "description": "A request for JSON",
+            "request": {
+                "path": "/authn/login",
+                "method": "POST",
+                "headers": {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "X-Okapi-Tenant": "diku"
+                },
+                "body": {
+                    "tenant": "diku",
+                    "username": "diku_admin",
+                    "password": "admin"
+                }
+            },
+            "response": {
+                "status": 201,
+                "body": {
+                    "username": "diku_admin",
+                    "password": "admin",
+                    "tenant": "diku"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "test GET"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}

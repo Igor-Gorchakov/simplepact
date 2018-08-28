@@ -4,7 +4,6 @@ package com.test;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
-import au.com.dius.pact.provider.junit.loader.PactBroker;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
@@ -18,7 +17,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 /*  Test for the provider using a mock client based on the contract */
 @RunWith(PactRunner.class)
-@Provider("FOLIO provider")
+@Provider("Provider")
 @PactFolder("target/pacts")
 public class PactProviderTest {
 
@@ -33,13 +32,13 @@ public class PactProviderTest {
         application = SpringApplication.run(ProviderServiceApplication.class);
     }
 
-    /* Specify the state in the contract that we want to test */
-    @State("test GET")
-    public void toGetState() {
-    }
-
     @AfterClass
     public static void kill() {
         application.stop();
+    }
+
+    /* Specify the state in the contract that we want to test */
+    @State("test GET")
+    public void toGetState() {
     }
 }

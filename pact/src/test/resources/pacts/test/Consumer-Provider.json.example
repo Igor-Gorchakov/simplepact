@@ -1,9 +1,9 @@
 {
     "provider": {
-        "name": "FOLIO provider"
+        "name": "Provider"
     },
     "consumer": {
-        "name": "FOLIO consumer"
+        "name": "Consumer"
     },
     "interactions": [
         {

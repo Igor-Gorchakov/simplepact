@@ -21,9 +21,9 @@ import static org.junit.Assert.assertTrue;
 public class PactConsumerTest {
 
     @Rule
-    public PactProviderRuleMk2 mockProvider = new PactProviderRuleMk2("FOLIO provider", "localhost", 8080, this);
+    public PactProviderRuleMk2 mockProvider = new PactProviderRuleMk2("Provider", "localhost", 8080, this);
 
-    @Pact(consumer = "FOLIO consumer")
+    @Pact(consumer = "Consumer")
     public RequestResponsePact buildConsumer(PactDslWithProvider builder) {
         Map<String, String> headers = new HashMap();
         headers.put("Content-Type", MediaType.APPLICATION_JSON_VALUE);
