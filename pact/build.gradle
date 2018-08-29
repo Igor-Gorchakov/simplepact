@@ -1,5 +1,4 @@
 dependencies {
     compile 'junit:junit:4.12'
-    compile 'au.com.dius:pact-jvm-consumer-junit_2.11:3.5.0'
     compile 'au.com.dius:pact-jvm-provider-junit_2.11:3.5.0'
 }

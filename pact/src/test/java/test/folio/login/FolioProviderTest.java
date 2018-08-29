@@ -9,10 +9,8 @@ import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import org.junit.runner.RunWith;
 
-/**
- * Test interacts with OKAPI proxy and calls mod-login using a mock client based on the contract.
- * The communication contract powered by pact file.
- *
+/*
+ * Testing mod-login
  * @author Igor Gorchakov
  */
 @RunWith(PactRunner.class)
